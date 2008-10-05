@@ -73,66 +73,6 @@ class ImfeedingFeed extends IcmsPersistableSeoObject {
 			}
 		}
 		return $ret;
-	?>
-		<div id="sp_results">
-
-			<!-- As long as the feed has data to work with... -->
-			<?php if ($feed): ?>
-
-
-				<!-- Let's begin looping through each individual news item in the feed. -->
-				<?php foreach($feed->get_items() as $item): ?>
-					<div class="chunk">
-
-						<?php
-						// Let's add a favicon for each item. If one doesn't exist, we'll use an alternate one.
-						if (!$favicon = $feed->get_favicon())
-						{
-							$favicon = './for_the_demo/favicons/alternate.png';
-						}
-						?>
-
-						<!-- If the item has a permalink back to the original post (which 99% of them do), link the item's title to it. -->
-						<h4><img src="<?php echo $favicon; ?>" alt="Favicon" class="favicon" /><?php if ($item->get_permalink()) echo '<a href="' . $item->get_permalink() . '">'; echo $item->get_title(); if ($item->get_permalink()) echo '</a>'; ?></h4>
-
-						<!-- Display the item's primary content. -->
-						<?php echo $item->get_content(); ?>
-
-						<?php
-						// Check for enclosures.  If an item has any, set the first one to the $enclosure variable.
-						if ($enclosure = $item->get_enclosure(0))
-						{
-							// Use the embed() method to embed the enclosure into the page inline.
-							echo '<div align="center">';
-							echo '<p>' . $enclosure->embed(array(
-								'audio' => './for_the_demo/place_audio.png',
-								'video' => './for_the_demo/place_video.png',
-								'mediaplayer' => './for_the_demo/mediaplayer.swf',
-								'alt' => '<img src="./for_the_demo/mini_podcast.png" class="download" border="0" title="Download the Podcast (' . $enclosure->get_extension() . '; ' . $enclosure->get_size() . ' MB)" />',
-								'altclass' => 'download'
-							)) . '</p>';
-							echo '<p class="footnote" align="center">(' . $enclosure->get_type();
-							if ($enclosure->get_size())
-							{
-								echo '; ' . $enclosure->get_size() . ' MB';
-							}
-							echo ')</p>';
-							echo '</div>';
-						}
-						?>
-
-					</div>
-
-				<!-- Stop looping through each item once we've gone through all of them. -->
-				<?php endforeach; ?>
-
-			<!-- From here on, we're no longer using data from the feed. -->
-			<?php endif; ?>
-
-		</div>
-
-	</div>
-	<?php
     }
 }
 

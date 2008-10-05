@@ -1,0 +1,10 @@
+<{if $imfeeding_feed}>
+	<div class="imfeeding_feed_container">
+
+		<h1 class="feed-title"><{$imfeeding_feed.feed_title}></h1>
+
+		<{if $imfeeding_is_admin}>
+			<div class="imfeeding_admin_links"><{$imfeeding_feed.editItemLink}><{$imfeeding_feed.deleteItemLink}></div>
+		<{/if}>
+	</div>
+<{/if}>

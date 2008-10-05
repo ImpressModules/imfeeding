@@ -1,0 +1,20 @@
+<{includeq file='db:imfeeding_header.html'}>
+
+<{if $imfeeding_feed}>
+	<{includeq file='db:imfeeding_single_feed.html'}>
+<{else}>
+	<{foreach item=imfeeding_feed from=$imfeeding_feeds}>
+		<{includeq file='db:imfeeding_single_feed.html'}>
+	<{/foreach}>
+<{/if}>
+
+<{if $imfeeding_feedform}>
+	<{includeq file='db:system_common_form.html' form=$imfeeding_feedform}>
+<{/if}>
+
+<{if $icmspersistable_delete_confirm}>
+	<{$icmspersistable_delete_confirm}>
+<{/if}>
+
+
+<{includeq file='db:imfeeding_footer.html'}>

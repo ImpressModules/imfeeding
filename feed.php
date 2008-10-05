@@ -100,7 +100,7 @@ if (in_array($clean_op,$valid_op,true)){
 
 	default:
 		if ($feedObj && !$feedObj->isNew()) {
-			$xoopsTpl->assign('imfeeding_feed', $feedObj->toArray());
+			$xoopsTpl->assign('imfeeding_feed', $feedObj->getFeed());
 			$xoopsTpl->assign('imfeeding_category_path', $feedObj->getVar('feed_title'));
 		} else {
 			redirect_header(IMFEEDING_URL, 3, _NOPERM);

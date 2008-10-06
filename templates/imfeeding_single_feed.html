@@ -1,6 +1,9 @@
 <{if $imfeeding_feed}>
 	<div class="imfeeding_feed_container">
 
+		<{if $imfeeding_feed.image_url}>
+			<{if $imfeeding_feed.image_link}><a href="<{$imfeeding_feed.image_link}>"><{/if}><img class="feed-image" src="<{$imfeeding_feed.image_url}>" alt="<{$imfeeding_feed.image_title}>" /><{if $imfeeding_feed.image_link}></a><{/if}>
+		<{/if}>
 		<h1 class="feed-title"><{if $imfeeding_feed.link}><a href="<{$imfeeding_feed.link}>"><{$imfeeding_feed.title}></a><{else}><{$imfeeding_feed.title}><{/if}></h1>
 		<p class="feed-description"><{$imfeeding_feed.description}></p>
 

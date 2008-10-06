@@ -13,26 +13,22 @@
 .imfeeding_breadcrumb {font-size: 0.8em; line-height: 18px;}
 .imfeeding_adminlinks {padding-top: 15px; padding-bottom: 5px; font-size: 0.8em; text-align: center; line-height: 18px;}
 
-.imfeeding_tag_container {
+.imfeeding_feed_container {
 	margin-bottom: 20px;
 }
-	.imfeeding_tag_container h1 {
+	.imfeeding_feed_container h1 {
 		margin-top: 20px;
 		margin-bottom:1px;
 		padding-bottom:3px;
 	}
-.imfeeding_tag_info {
+.feed-image {
+	float: right;
+	padding-left: 5px;
+}
+.imfeeding_feed_info {
 	font-size: 80%;
 }
-.imfeeding_tag_content {}
-#imfeeding_tag_comments_container {}
-.imfeeding_tag_comments {
-	background-image: url(images/comments.gif);
-	background-repeat: no-repeat;
-	padding-left: 15px;
-	vertical-align: middle;
-	font-size: 80%;
-}
+.imfeeding_feed_content {}
 .imfeeding_admin_links {}
 #imfeeding_navbar {
 	text-align: center;

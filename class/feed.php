@@ -63,6 +63,9 @@ class ImfeedingFeed extends IcmsPersistableSeoObject {
 		if ($feed) {
 			$ret['title'] = $feed->get_title();
 			$ret['link'] = $feed->get_link();
+			$ret['image_url'] = $feed->get_image_url();
+			$ret['image_title'] = $feed->get_image_title();
+			$ret['image_link'] = $feed->get_image_link();
 			$ret['description'] = $feed->get_description();
 			foreach($feed->get_items() as $feed_item) {
 				$item = array();

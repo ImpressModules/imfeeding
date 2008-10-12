@@ -11,5 +11,6 @@
 
 if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 
-define("_MB_IMFEEDING_TAG_RECENT_LIMIT", "Tag limit: ");
+define("_MB_IMFEEDING_FEED_SELECT", "Select feed to display: ");
+define("_MB_IMFEEDING_FEED_RECENT_LIMIT", "Items limit: ");
 ?>

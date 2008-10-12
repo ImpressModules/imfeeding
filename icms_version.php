@@ -72,24 +72,14 @@ $modversion['search'] = array (
 $modversion['hasMain'] = 1;
 
 /** Blocks information */
-/*$modversion['blocks'][1] = array(
-  'file' => 'tag_recent.php',
-  'name' => _MI_IMFEEDING_TAGRECENT,
-  'description' => _MI_IMFEEDING_TAGRECENTDSC,
-  'show_func' => 'imfeeding_tag_recent_show',
-  'edit_func' => 'imfeeding_tag_recent_edit',
+$modversion['blocks'][1] = array(
+  'file' => 'feed_recent.php',
+  'name' => _MI_IMFEEDING_FEEDRECENT,
+  'description' => _MI_IMFEEDING_FEEDRECENTDSC,
+  'show_func' => 'imfeeding_feed_recent_show',
+  'edit_func' => 'imfeeding_feed_recent_edit',
   'options' => '5',
-  'template' => 'imfeeding_tag_recent.html');
-
-$modversion['blocks'][] = array(
-  'file' => 'tag_by_month.php',
-  'name' => _MI_IMFEEDING_TAGBYMONTH,
-  'description' => _MI_IMFEEDING_TAGBYMONTHDSC,
-  'show_func' => 'imfeeding_tag_by_month_show',
-  'edit_func' => 'imfeeding_tag_by_month_edit',
-  'options' => '',
-  'template' => 'imfeeding_tag_by_month.html');
-*/
+  'template' => 'imfeeding_feed_recent.html');
 
 /** Templates information */
 $modversion['templates'][1] = array(
@@ -118,14 +108,13 @@ $modversion['templates'][] = array(
 
 /** Preferences information */
 
-/*$modversion['config'][] = array(
-  'name' => 'tags_limit',
+$modversion['config'][] = array(
+  'name' => 'feeds_limit',
   'title' => '_MI_IMFEEDING_LIMIT',
   'description' => '_MI_IMFEEDING_LIMITDSC',
   'formtype' => 'textbox',
   'valuetype' => 'text',
   'default' => 5);
-*/
 
 /** Comments information */
 $modversion['hasComments'] = 0;

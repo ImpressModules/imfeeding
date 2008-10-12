@@ -1,0 +1,5 @@
+<ul>
+<{foreach item=feed_item from=$block.feed.items}>
+	<li><{if $feed_item.permalink}><a href="<{$feed_item.permalink}>"><{$feed_item.title}></a><{else}><{$feed_item.title}><{/if}></li>
+<{/foreach}>
+</ul>

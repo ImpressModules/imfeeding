@@ -56,8 +56,14 @@ class ImfeedingFeed extends IcmsPersistableSeoObject {
         return parent::getVar($key, $format);
     }
 
-    function getFeed() {
-    	$ret = array();
+    /**
+     * Fetch the feed and all related information
+     *
+     * @param int $limit limit of items to return
+     * @return array of feed information
+     */
+    function getFeed($limit=0) {
+    	$ret = parent::toArray();
 		// Create a new instance of the SimplePie object
 		$feed = new IcmsSimpleRss($this->getVar('feed_url'), 0);
 		if ($feed) {
@@ -67,7 +73,7 @@ class ImfeedingFeed extends IcmsPersistableSeoObject {
 			$ret['image_title'] = $feed->get_image_title();
 			$ret['image_link'] = $feed->get_image_link();
 			$ret['description'] = $feed->get_description();
-			foreach($feed->get_items() as $feed_item) {
+			foreach($feed->get_items(0, $limit) as $feed_item) {
 				$item = array();
 				$item['permalink'] = $feed_item->get_permalink();
 				$item['title'] = $feed_item->get_title();
@@ -81,13 +87,37 @@ class ImfeedingFeed extends IcmsPersistableSeoObject {
 
 class ImfeedingFeedHandler extends IcmsPersistableObjectHandler {
 
-	public $parentName = 'feed_pid';
-
 	/**
 	 * Constructor
 	 */
     public function __construct(&$db){
         $this->IcmsPersistableObjectHandler($db, 'feed', 'feed_id', 'feed_title', 'feed_description', 'imfeeding');
+    }
+
+    /**
+     * Get feeds
+     *
+     * @param int $start
+     * @param int $limit
+     * @return array of feeds
+     */
+    function getFeeds() {
+		$feedsArray = $this->getObjects(false, true, false);
+		return $feedsArray;
+    }
+
+    /**
+     * Get feeds c ount
+     *
+     * @param int $start
+     * @param int $limit
+     * @return int count of feeds
+     */
+    function getFeedsCount($start=0, $limit=0) {
+		$criteria = new CriteriaCompo();
+		$criteria->setStart($start);
+		$criteria->setLimit($limit);
+		return $this->getCount($criteria);
     }
 }
 ?>

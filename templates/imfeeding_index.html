@@ -1,17 +1,11 @@
 <{includeq file='db:imfeeding_header.html'}>
 
-<{foreach item=imfeeding_tag from=$imfeeding_tags}>
-	<div class="imfeeding_tag_container">
-		<h1><{$imfeeding_tag.itemLink}></h1>
-		<div class="imfeeding_tag_info"><{$imfeeding_tag.tag_info}></div>
-		<div class="imfeeding_tag_content">
-			<{$imfeeding_tag.tag_lead}>
-		</div>
-		<div class="imfeeding_tag_comments">
-			<{$imfeeding_tag.tag_comment_info}>
-		</div>
-		<{if $imfeeding_tag.userCanEditAndDelete}>
-			<div class="imfeeding_admin_links"><{$imfeeding_tag.editItemLink}><{$imfeeding_tag.deleteItemLink}></div>
+<{foreach item=imfeeding_feed from=$imfeeding_feeds}>
+	<div class="imfeeding_feed_container">
+		<h1><{$imfeeding_feed.itemLink}></h1>
+		<div class="imfeeding_feed_description"><{$imfeeding_feed.feed_description}></div>
+		<{if $imfeeding_is_admin}>
+			<div class="imfeeding_admin_links"><{$imfeeding_feed.editItemLink}><{$imfeeding_feed.deleteItemLink}></div>
 		<{/if}>
 	</div>
 <{/foreach}>

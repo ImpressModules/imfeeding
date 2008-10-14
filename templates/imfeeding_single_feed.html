@@ -9,11 +9,11 @@
 			<div class="imfeeding_admin_links"><{$imfeeding_feed.editItemLink}><{$imfeeding_feed.deleteItemLink}></div>
 		<{/if}>
 
-		<p class="feed-description"><{$imfeeding_feed.description}></p>
-
 		<{foreach item=feed_item from=$imfeeding_feed.items}>
-			<h2><{if $feed_item.permalink}><a href="<{$feed_item.permalink}>"><{$feed_item.title}></a><{else}><{$feed_item.title}><{/if}></h2>
-			<p><{$feed_item.content}></p>
+			<div class="imfeeding_feed_item">
+				<h2><{if $feed_item.permalink}><a href="<{$feed_item.permalink}>"><{$feed_item.title}></a><{else}><{$feed_item.title}><{/if}></h2>
+				<p><{$feed_item.content}></p>
+			</div>
 		<{/foreach}>
 	</div>
 <{/if}>

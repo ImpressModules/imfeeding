@@ -51,7 +51,7 @@ $imfeeding_feed_handler = xoops_getModuleHandler('feed');
 $clean_op = '';
 
 if (isset($_GET['op'])) $clean_op = $_GET['op'];
-if (isset($_FEED['op'])) $clean_op = $_FEED['op'];
+if (isset($_POST['op'])) $clean_op = $_POST['op'];
 
 /** Again, use a naming convention that indicates the source of the content of the variable */
 $clean_feed_id = isset($_GET['feed_id']) ? intval($_GET['feed_id']) : 0 ;
@@ -86,7 +86,7 @@ if (in_array($clean_op,$valid_op,true)){
 		if (!$feedObj->userCanEditAndDelete()) {
 			redirect_header($feedObj->getItemLink(true), 3, _NOPERM);
 		}
-		if (isset($_FEED['confirm'])) {
+		if (isset($_POST['confirm'])) {
 		    if (!$xoopsSecurity->check()) {
 		    	redirect_header($impresscms->urls['previouspage'], 3, _MD_IMFEEDING_SECURITY_CHECK_FAILED . implode('<br />', $xoopsSecurity->getErrors()));
 		    }
@@ -100,7 +100,7 @@ if (in_array($clean_op,$valid_op,true)){
 
 	default:
 		if ($feedObj && !$feedObj->isNew()) {
-			$xoopsTpl->assign('imfeeding_feed', $feedObj->getFeed());
+			$xoopsTpl->assign('imfeeding_feed', $feedObj->getFeed($xoopsModuleConfig['feeds_limit']));
 			$xoopsTpl->assign('imfeeding_category_path', $feedObj->getVar('feed_title'));
 		} else {
 			redirect_header(IMFEEDING_URL, 3, _NOPERM);

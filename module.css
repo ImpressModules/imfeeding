@@ -28,7 +28,10 @@
 .imfeeding_feed_info {
 	font-size: 80%;
 }
-.imfeeding_feed_content {}
+.imfeeding_feed_item h2 {
+	padding-bottom: 3px;
+	border-bottom: 3px solid silver;
+}
 .imfeeding_admin_links {}
 #imfeeding_navbar {
 	text-align: center;

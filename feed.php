@@ -60,7 +60,9 @@ $feedObj = $imfeeding_feed_handler->get($clean_feed_id);
 /** Create a whitelist of valid values, be sure to use appropriate types for each value
  * Be sure to include a value for no parameter, if you have a default condition
  */
-$valid_op = array ('mod','addfeed','del','');
+// for now, let's only allow to display feed. Later, users might be able to add their own feed...
+//$valid_op = array ('mod','addfeed','del','');
+$valid_op = array ('');
 /**
  * Only proceed if the supplied operation is a valid operation
  */

@@ -15,6 +15,7 @@ if (!defined("ICMS_ROOT_PATH")) die("ICMS root path not defined");
 
 function imfeeding_search($queryarray, $andor, $limit, $offset, $userid)
 {
+	/*
 	$imfeeding_tag_handler = xoops_getModuleHandler('tag', 'imfeeding');
 	$tagsArray = $imfeeding_tag_handler->getTagsForSearch($queryarray, $andor, $limit, $offset, $userid);
 
@@ -28,6 +29,7 @@ function imfeeding_search($queryarray, $andor, $limit, $offset, $userid)
 		unset($item);
 	}
 	return $ret;
+	*/
 }
 
 ?>

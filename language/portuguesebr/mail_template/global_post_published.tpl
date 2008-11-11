@@ -1,24 +1,24 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-The following tag has been published on {X_SITENAME} :
+A seguinte etiqueta (Tag) foi publicada no {X_SITENAME} :
 
 "{TAG_TITLE}"
 
-You can read this item here:
+Você pode ler este item aqui:
 
 {TAG_URL}
 
 -----------
 
-You are receiving this message because you selected to be notified when new items are published in the {MODULE_NAME} module of our site.
+Você está recebendo esta mensagem porque você escolheu para ser notificado quando novos itens forem publicados no módulo {MODULE_NAME} do nosso site.
 
-if this is an error or you wish not to receive further  notifications, please update your subscriptions by visiting the link below:
+Se isto é um erro ou se você não pretende receber mais notificações, atualize as sua notificações, visitando o link abaixo:
 {X_UNSUBSCRIBE_URL}
 
-Please do not reply to this message.
+NÃO RESPONDER ESTA MENSAGEM.
 
 -----------
 
 {X_SITENAME} ({X_SITEURL})
-The Webmaster
+À administração
 {X_ADMINMAIL}

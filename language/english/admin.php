@@ -26,5 +26,4 @@ define("_AM_IMFEEDING_FEED_MODIFIED", "The feed was successfully modified.");
 define("_AM_IMFEEDING_FEED_CREATED", "The feed has been successfully created.");
 define("_AM_IMFEEDING_FEED_VIEW", "Tag info");
 define("_AM_IMFEEDING_FEED_VIEW_DSC", "Here is the info about this feed.");
-
 ?>

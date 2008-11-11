@@ -24,5 +24,4 @@ define("_CO_IMFEEDING_FEED_FEED_CACHE", "Cache time");
 define("_CO_IMFEEDING_FEED_FEED_CACHE_DSC", "Input the amount minutes the feed will be cache before being updated again.");
 define("_CO_IMFEEDING_FEED_FEED_LAST_UPDATED", "Last updated");
 define("_CO_IMFEEDING_FEED_FEED_LAST_UPDATED_DSC", "");
-
 ?>

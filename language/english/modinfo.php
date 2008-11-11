@@ -28,5 +28,4 @@ define("_MI_IMFEEDING_LIMITDSC", "Number of feeds to display on index page");
 // Blocks
 define("_MI_IMFEEDING_FEEDRECENT", "Recent items");
 define("_MI_IMFEEDING_FEEDRECENTDSC", "Display a block of recent items of a selected feed");
-
 ?>

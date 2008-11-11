@@ -17,7 +17,7 @@ define("_AM_IMFEEDING_FIRST_USE", "Это первый доступ к моду�
 
 // Feed
 define("_AM_IMFEEDING_FEEDS_DSC", "Все каналы в модуле");
-define("_AM_IMFEEDING_FEED_CREATE", "Добавить канал");
+define("_AM_IMFEEDING_FEED_CREATE", "Создание канала");
 define("_AM_IMFEEDING_FEED", "Тэг");
 define("_AM_IMFEEDING_FEED_CREATE_INFO", "Заполните следующую форму для создания нового канала.");
 define("_AM_IMFEEDING_FEED_EDIT", "Редактировать этот канал");

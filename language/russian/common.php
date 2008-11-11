@@ -18,7 +18,7 @@ define("_CO_IMFEEDING_FEED_FEED_DESCRIPTION", "Описание");
 define("_CO_IMFEEDING_FEED_FEED_DESCRIPTION_DSC", "");
 define("_CO_IMFEEDING_FEED_FEED_URL", "URL");
 define("_CO_IMFEEDING_FEED_FEED_URL_DSC", "");
-define("_CO_IMFEEDING_FEED_FEED_UID", "Создано");
+define("_CO_IMFEEDING_FEED_FEED_UID", "Кто создал");
 define("_CO_IMFEEDING_FEED_FEED_UID_DSC", "");
 define("_CO_IMFEEDING_FEED_FEED_CACHE", "Время жизни кэша");
 define("_CO_IMFEEDING_FEED_FEED_CACHE_DSC", "Введите количество минут, в течение которых канал будет находиться в кэше до обновления.");
